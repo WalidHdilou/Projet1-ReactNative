@@ -3,6 +3,6 @@ export interface Product {
   nom: string;
   prix: number;
   description: string;
-  image: string;
+  image: any;
   enStock: boolean;
 }

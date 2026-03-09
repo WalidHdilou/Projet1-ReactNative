@@ -1,8 +1,5 @@
-import React from "react";
-// On remonte d'un cran (../) pour aller chercher le App.tsx qui est à la racine
 import App from "../App";
 
-export default function EntryPoint() {
-  // On retourne ton chef d'orchestre global !
+export default function Page() {
   return <App />;
 }

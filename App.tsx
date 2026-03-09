@@ -1,33 +1,30 @@
-import React from "react";
-// On importe le NavigationIndependentTree en plus
 import {
-  NavigationContainer,
-  NavigationIndependentTree,
+    NavigationContainer,
+    NavigationIndependentTree,
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from "react";
 
-import BookDetailScreen from "./screens/BookDetailScreen";
-import BookListScreen from "./screens/BookListScreen";
+import ProductDetailScreen from "./screens/ProductDetailScreen";
+import ProductListScreen from "./screens/ProductListScreen";
 import { RootStackParamList } from "./types/navigation";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    // On isole notre navigation de celle d'Expo avec cette balise
     <NavigationIndependentTree>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="BookList">
+        <Stack.Navigator initialRouteName="ProductList">
           <Stack.Screen
-            name="BookList"
-            component={BookListScreen}
-            options={{ title: "Ma Bibliothèque" }}
+            name="ProductList"
+            component={ProductListScreen}
+            options={{ title: "Ma Boutique" }}
           />
-
           <Stack.Screen
-            name="BookDetail"
-            component={BookDetailScreen}
-            options={{ title: "Détails du livre" }}
+            name="ProductDetail"
+            component={ProductDetailScreen}
+            options={{ title: "Détails du produit" }}
           />
         </Stack.Navigator>
       </NavigationContainer>
